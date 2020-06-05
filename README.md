@@ -1,2 +1,2 @@
 # algoProblems
-Assortment of Algorith / Toy / LeetCode Problems
+Assortment of Algorithm / Toy / LeetCode Problems
