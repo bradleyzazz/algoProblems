@@ -18,8 +18,8 @@ const levelOrderBottom = (root) => {
         if (!node) return;
         
         !layers[depth] ? layers[depth] = [node.val] : layers[depth].push(node.val);
-
         depth++;
+        
         getLayers(node.left, depth);
         getLayers(node.right, depth);
     }
