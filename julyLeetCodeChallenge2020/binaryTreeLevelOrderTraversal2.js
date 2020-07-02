@@ -15,23 +15,15 @@ const levelOrderBottom = (root) => {
     let layers = [];
     
     const getLayers = (node, depth) => {
-        if (!node) {
-            return null;
-        }
+        if (!node) return;
         
-        if (layers[depth]) {
-            layers[depth].push(node.val)
-        } else {
-            layers[depth] = [node.val];
-        }
-        
+        !layers[depth] ? layers[depth] = [node.val] : layers[depth].push(node.val);
+
         depth++;
-        
         getLayers(node.left, depth);
         getLayers(node.right, depth);
     }
     
     getLayers(root, 0);
     return layers.reverse();
-    
 }
