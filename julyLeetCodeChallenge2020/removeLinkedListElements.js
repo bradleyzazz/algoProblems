@@ -1,11 +1,11 @@
 const removeElements = (head, val) => {
-    while (head !== null && head.val === val) {
+    while (head && head.val === val) {
         head = head.next;
     }
 
     let current = head;
 
-    while (current !== null && current.next !== null) {
+    while (current && current.next) {
         if (current.next.val === val) {
             current.next = current.next.next;
         } else {
